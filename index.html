@@ -11,6 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="intro" id="intro" aria-hidden="true">
+    <canvas class="intro-canvas" id="intro-canvas"></canvas>
+    <div class="intro-skip">
+      <button class="intro-skip-btn" id="intro-skip" type="button">跳过</button>
+    </div>
+  </div>
+
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" id="nav-name"></a>
@@ -25,11 +32,15 @@
     <section id="hero" class="hero">
       <div class="hero-bg"></div>
       <div class="container hero-content">
-        <div class="hero-avatar" id="hero-avatar"></div>
-        <h1 class="hero-name" id="hero-name"></h1>
-        <p class="hero-title" id="hero-title"></p>
-        <p class="hero-summary" id="hero-summary"></p>
-        <div class="hero-actions" id="hero-actions"></div>
+        <div class="hero-header">
+          <div class="hero-avatar" id="hero-avatar"></div>
+          <div class="hero-meta">
+            <h1 class="hero-name" id="hero-name"></h1>
+            <p class="hero-title" id="hero-title"></p>
+            <p class="hero-summary" id="hero-summary"></p>
+            <div class="hero-actions" id="hero-actions"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -87,6 +98,8 @@
   </footer>
 
   <script src="content.js"></script>
+  <script src="intro.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
+
